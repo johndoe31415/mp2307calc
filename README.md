@@ -7,6 +7,11 @@ eBay. Sometimes they're also erroneously called "Mini-LM2596" even though they
 have nothing to do with the LM2596 (just piggybacking on the popularity of the
 2596).
 
+## Documentation
+  * [Datasheet for MP2307](https://www.monolithicpower.com/pub/media/document/MP2307_r1.9.pdf)
+  * [Schematic of Mini-360 and component placement](https://johndoe31415.github.io/mp2307calc/)
+
+## Running the script
 Running it is dead simple, you can simply give it a value for R2 that you like
 (by default 10k are assumed):
 
@@ -70,5 +75,5 @@ voltages = [ 1, 1.8, 2, 3, 3.3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
 
 That can be modified as you see fit. Have fun!
 
-# License
+## License
 GNU GPL-3.

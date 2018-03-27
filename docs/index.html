@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Mini-360 Buck Converter based on MP2307</title>
+		<link rel="stylesheet" href="stylesheet.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<p>
+		This is a reverse-engineered component placement diagram from one of the common Mini-360 switch mode power supply circuitrs. The software to calculate resistor values <a href="https://github.com/johndoe31415/mp2307calc">can be found here</a> and the <a href="schematic.pdf">schematic PDF is here</a>. Essentially, it's the "typical application" copied 1:1 -- I've labled the components as they are in the datasheet, so that it's easy to find your way around there.
+		</p>
+		<p>
+		Note that there are <b>deliberately underpowered, broken</b> Mini-360 circuits in circulation. These will have horrible efficiency and be a general pain-in-the-butt. Here's what was different in my "broken" version compared to the version I got that was good:
+		</p>
+		<ul>
+			<li>C1, C2 is 6.8µF instead of 10µF</li>
+			<li>L1 is 2.2 µH instead of 10µH</li>
+		</ul>
+		<p>
+		This will lead to regulator instability and general, horrible performance (40% efficiency and worse). Note that even the ones that are "properly" working have some deficiencies:
+		</p>
+		<ul>
+			<li>C2 is supposed to be 20µF, but is only 10µF</li>
+			<li>Extenal bootstrapping diode (e.g., 1N4148) is said to improve performance (see datasheet pg. 10) -- not present in circuit</li>
+			<li>Bootstrapping capacitor (100nF - 1µF) is said to improve performance (see datasheet pg. 10) --  not present in circuit</li>
+			<li>External schottky diode (e.g., MBRS130) is said to improve performance (see datasheet pg. 7) -- not present in circuit</li>
+		</ul>
+		<p>
+		To figure out if you're suffering from regulator instability, the easiest way is to directly measure at the inductor (side facing out). If everything is great, you'll see something like this:
+		</p>
+		<div class="img">
+			Good inductor:<br />
+			<img src="mini360-good.png" />
+		</div>
+		<p>
+		If you're experiencing intermittent regulator instabilities, you'll see something like this (if you're lucky):
+		</p>
+		<div class="img">
+			Intermittent dropouts (too small inductivity or in/out capacitors) -- reduced efficiency:<br />
+			<img src="mini360-bad1.png" />
+		</div>
+		<p>
+		If it's even worse, you might see something like this:
+		</p>
+		<div class="img">
+			Intermittent dropouts and ringing (too small inductivity or in/out capacitors) -- drastically reduced efficiency:<br />
+			<img src="mini360-bad2.png" />
+		</div>
+		<div class="img">
+			Intermittent dropouts and ringing (too small inductivity or in/out capacitors) -- drastically reduced efficiency:<br />
+			<img src="mini360-bad3.png" />
+		</div>
+		<p>
+		Here's the hardware:
+		</p>
+		<div class="img">
+			Bare PCB:<br />
+			<img src="mini360-pcb.png" />
+		</div>
+		<div class="img">
+			PCB populated with components:<br />
+			<img src="mini360.png" />
+		</div>
+		<div class="img">
+			Component placement:<br />
+			<img src="mini360.svg" width="600" />
+		</div>
+
+	</body>
+</html>
