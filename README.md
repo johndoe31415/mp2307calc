@@ -1,11 +1,19 @@
 # mp2307calc
 This is a small tool to calculate resistance values required to get a certain
 voltage from the MP2307 switched mode power supply IC (3A, 23V, 340kHz
-synchronous rectified step-down converter). It's a popular IC that is the main
-component in the "Mini-360" mini regulator boards that can be found all over
-eBay. Sometimes they're also erroneously called "Mini-LM2596" even though they
-have nothing to do with the LM2596 (just piggybacking on the popularity of the
-2596).
+synchronous rectified step-down converter). 
+
+## Mini-360 module
+The MP2307 appears as part of the popular "Mini-360" mini regulator boards that
+can be found all over eBay. Sometimes they're also erroneously called
+"Mini-LM2596" even though they have nothing to do with the LM2596 (just
+piggybacking on the popularity of the LM2596).
+
+I discovered that some of these modules are populated with underpowered
+components and are faulty, reducing in extreme loss of efficiency (in bad cases
+even worse efficiency than a linear regulator). To detect if your Mini-360 is
+faulty, I've created a [page that shows exactly what to look out
+for](https://johndoe31415.github.io/mp2307calc/).
 
 ## Documentation
   * [Datasheet for MP2307](https://www.monolithicpower.com/pub/media/document/MP2307_r1.9.pdf)
