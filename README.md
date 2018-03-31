@@ -15,9 +15,18 @@ even worse efficiency than a linear regulator). To detect if your Mini-360 is
 faulty, I've created a [page that shows exactly what to look out
 for](https://johndoe31415.github.io/mp2307calc/).
 
+## Successor
+This script is just a one-trick pony. If you're looking for something more
+beautiful, more powerful and usable, check out my PyEngineer project. It also
+can perform MP2307 calculations, but can do much more on top that's handy for
+electronics engineering. [Here are some screenshots so you can get an idea of
+how it looks.](https://johndoe31415.github.io/pyengineer/) [And this is the PyEngineer
+project page.](https://github.com/johndoe31415/pyengineer/)
+
 ## Documentation
   * [Datasheet for MP2307](https://www.monolithicpower.com/pub/media/document/MP2307_r1.9.pdf)
   * [Schematic of Mini-360 and component placement](https://johndoe31415.github.io/mp2307calc/)
+  * [PyEngineer Screenshots](https://johndoe31415.github.io/pyengineer/)
 
 ## Running the script
 Running it is dead simple, you can simply give it a value for R2 that you like
