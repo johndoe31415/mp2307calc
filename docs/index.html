@@ -12,16 +12,16 @@
 		Note that there are <b>deliberately underpowered, broken</b> Mini-360 circuits in circulation. These will have horrible efficiency and be a general pain-in-the-butt. Here's what was different in my "broken" version compared to the version I got that was good:
 		</p>
 		<ul>
-			<li>C1, C2 is 6.8µF instead of 10µF</li>
-			<li>L1 is 2.2 µH instead of 10µH</li>
+			<li>C<sub>1</sub>, C<sub>2</sub> is 6.8µF instead of 10µF</li>
+			<li>L<sub>1</sub> is 2.2 µH instead of 10µH</li>
 		</ul>
 		<p>
 		This will lead to regulator instability and general, horrible performance (40% efficiency and worse). Note that even the ones that are "properly" working have some deficiencies:
 		</p>
 		<ul>
-			<li>C2 is supposed to be 20µF, but is only 10µF</li>
+			<li>C<sub>2</sub> is supposed to be 20µF, but is only 10µF</li>
+			<li>Bootstrapping capacitor C<sub>5</sub> should be in the range 100nF - 1µF (see datasheet pg. 10) --  only 10nF in circuit</li>
 			<li>Extenal bootstrapping diode (e.g., 1N4148) is said to improve performance (see datasheet pg. 10) -- not present in circuit</li>
-			<li>Bootstrapping capacitor (100nF - 1µF) is said to improve performance (see datasheet pg. 10) --  not present in circuit</li>
 			<li>External schottky diode (e.g., MBRS130) is said to improve performance (see datasheet pg. 7) -- not present in circuit</li>
 		</ul>
 		<p>
